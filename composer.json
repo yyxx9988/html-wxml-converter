@@ -1,0 +1,27 @@
+{
+  "name": "yyxx9988/html-wxml-converter",
+  "description": "A PHP library that can convert html into wxml and back.",
+  "keywords": [
+    "html",
+    "wxml",
+    "converter"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "yyxx9988",
+      "email": "yyxx9988@qq.com"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "yyxx9988\\mlconverter\\": "src"
+    }
+  }
+}
