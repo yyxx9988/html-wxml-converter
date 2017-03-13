@@ -7,6 +7,7 @@ class Converter
     private $html;
 
     private $htmlTags = [
+        'a' => 'view',
         'p' => 'view',
         'h1' => 'view',
         'h2' => 'view',
@@ -116,7 +117,7 @@ class Converter
         }, $result);
 
         foreach ($this->htmlTags as $k => $v) {
-            $result = preg_replace('/<'.$k.'\s+([^>]*?)>(.*?)\<\/'.$k.'>/is', '<'.$v.' $1>$2</'.$v.'>', $result);
+            $result = preg_replace('/<'.$k.'\s+([^>]*?)>(.*?)\<\/'.$k.'>/is', '<'.$v.' $1 data-htmltag="'.$k.'">$2</'.$v.'>', $result);
         }
 
         return $result;
