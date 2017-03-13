@@ -18,8 +18,21 @@ $ composer require "yyxx9988/html-wxml-converter"
 use \yyxx9988\mlconverter\Converter;
 
 $converter = new Converter();
-$converter->setHtml('<div><p><img src="..."></p></div>');
+
+$converter->setHtml('
+<div>
+    <a>...</a>
+    <p><img src="..."></p>
+</div>
+');
+
 echo $converter->convert();
+
+// result
+<view data-htmltag="div">
+    <view data-htmltag="a">...</view>
+    <view data-htmltag="p"><image src="..."></image></view>
+</view>
 ```
 
 # Customize
