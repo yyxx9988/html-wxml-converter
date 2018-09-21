@@ -117,7 +117,7 @@ class Converter
         }, $result);
 
         foreach ($this->htmlTags as $k => $v) {
-            $result = preg_replace('/<'.$k.'\s+([^>]*?)>(.*?)\<\/'.$k.'>/is', '<'.$v.' $1 data-htmltag="'.$k.'">$2</'.$v.'>', $result);
+            $result = preg_replace('/<'.$k.'\s{0,}([^>]*?)>(.*?)\<\/'.$k.'>/is', '<'.$v.' $1 data-htmltag="'.$k.'">$2</'.$v.'>', $result);
         }
 
         return $result;
